@@ -30,6 +30,7 @@ function App() {
         setHasError(false)
         setSuggestedList()
         setLocation(res.data)
+        search.reset()
       })
       .catch(err => setHasError(true))
   }, [imputSearch])
@@ -59,7 +60,7 @@ function App() {
           <source src={Video} type="video/mp4" />
         </video>
         <img className='header__logo' src={logo} alt="Rick and Morty" />
-        <form className='form__search' onSubmit={handleSubmit}>
+        <form id='search' className='form__search' onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder='Enter a number from 1 to 126'
