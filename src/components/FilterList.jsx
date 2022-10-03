@@ -7,7 +7,7 @@ const FilterList = ({ suggestedList, setimputSearch }) => {
     <ul className='list__search'>
       {
         suggestedList?.map(location => (
-          <li className='list__search-hover' onClick={() => handleClick(location.id)} key={location.id}>{location.name}</li>
+          <li onClick={() => handleClick(location.id)} key={location.id}>{location.name}</li>
         ))
       }
     </ul>

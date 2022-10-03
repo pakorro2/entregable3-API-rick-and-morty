@@ -7,7 +7,7 @@ import Location from './components/Location'
 import getRandomNumber from './utils/functions/getRandomNumber'
 import Error from './components/Error'
 import Video from './assets/img/Video.mp4'
-import logo from './assets/img/logo-rick-and-morty.svg'
+import logo from './assets/img/logo-rick-and-morty.png'
 
 function App() {
   // Para guardar location
@@ -28,6 +28,7 @@ function App() {
     axios.get(URL)
       .then((res) => {
         setHasError(false)
+        setSuggestedList()
         setLocation(res.data)
       })
       .catch(err => setHasError(true))
@@ -36,9 +37,7 @@ function App() {
   const handleSubmit = e => {
     e.preventDefault()
     setimputSearch(e.target.idLocation.value)
-
   }
-
   const handleChange = e => {
 
     if (e.target.value === '') {
@@ -59,15 +58,16 @@ function App() {
         <video muted='muted' autoplay='autoplay' loop>
           <source src={Video} type="video/mp4" />
         </video>
-        <img src={logo} alt="Rick and Morty" />
-        <form className='flex-center' onSubmit={handleSubmit}>
+        <img className='header__logo' src={logo} alt="Rick and Morty" />
+        <form className='form__search' onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder='Enter a number from 1 to 126'
             id='idLocation'
             onChange={handleChange}
+            className='search__imput'
           />
-          <button>Search</button>
+          <button className='search__btn'>Search</button>
           <FilterList suggestedList={suggestedList} setimputSearch={setimputSearch} className='suggested__list' />
         </form>
       </header>

@@ -13,16 +13,16 @@ const CardResident = ({ url }) => {
   }, [])
 
   return (
-    <article  >
-      <header className='card'>
-        <img className="circle" src={resident?.image} alt={resident?.name} />
-        <div>
-          <div className="circle"></div>
-          <span>{resident?.status}</span>
-        </div>
+    <article className='card'>
+      <header className='card__header'>
+        <img className='card__img' src={resident?.image} alt={resident?.name} />
         <section>
-          <h2>{resident?.name}</h2>
-          <ul>
+          <div className='card__container-status' >
+            <div className={`card__circle-status ${resident?.status}`}></div>
+            <span className='card__status'>{resident?.status}</span>
+          </div>
+          <h2 className='card__title'>{resident?.name}</h2>
+          <ul className='card__info-content'>
             <li><span>Specie: </span>{resident?.species}</li>
             <li><span>Origin: </span>{resident?.origin.name}</li>
             <li><span>Episodes where appear: </span>{resident?.episode.length}</li>
