@@ -21,86 +21,6 @@
   box-shadow: 3px 3px 10px #0009;
 }
 
-.card {
-  width: 100%;
-  max-width: 280px;
-  background: var(--background-cards);
-  color: white;
-}
-
-.card__header {
-  position: relative;
-  width: 280px;
-  border: solid 5px #0009;
-}
-
-.card__img {
-  width: 100%;
-  border-bottom: solid 5px #0009;
-}
-
-.card__container-status {
-  position: absolute;
-  background-color: var(--background-cards);
-  left: 0;
-  top: 20px;
-  width: 100px;
-  padding: 5px;
-  border-radius: 0 10px 10px 0;
-  font-size: 14px;
-  display: flex;
-  gap: 10px;
-}
-
-.unknown {
-  background-color: gray;
-}
-
-.Dead {
-  background-color: red;
-}
-
-.Alive {
-  background-color: green;
-}
-
-.card__circle-status {
-  width: 15px;
-  margin-top: 3px;
-  height: 15px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-}
-
-.card__status {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.card__title {
-  font-size: 1.2rem;
-  padding-top: 10px;
-  background-color: rgba(255, 255, 255, 0.600);
-  color: black;
-}
-
-.card__info-content {
-  text-align: left;
-  padding: 5px 5px 10px 5px;
-  text-align: center;
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.600);
-  color: black;
-}
-
-.card__info-content li {
-  padding: 2px 0 2px 0;
-}
-
-.card__info-content span {
-  font-weight: 500;
-}
-
 .location__bar {
   display: flex;
   list-style: none;
@@ -160,7 +80,6 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: absolute;
   margin-top: 170px;
-  background: ;
 }
 
 .form__search input,
@@ -231,9 +150,17 @@
   border-top: 1px solid #bfc8c9;
 }
 
-.Alive {
-  background-color: green;
-  border-radius: 50%;
+footer {
+
+  padding: 25px 20px 25px 20px;
+  box-shadow: 3px 3px 10px #0009;
+  background-color: var(--background-cards);
+  text-align: center;
+  font-weight: 600;
+  height: 70px;
+  bottom: 0;
+  width: 100vh;
+  margin-top: 25px;
 }
 
 @media (max-width: 320px) {

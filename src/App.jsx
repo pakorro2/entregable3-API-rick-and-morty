@@ -90,6 +90,9 @@ function App() {
             </div>
           </>
       }
+      <footer>
+        <p>Hecho por Pako Cárdenas</p>
+      </footer>
     </div>
   )
 }
